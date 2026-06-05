@@ -238,3 +238,4 @@ yarn-error.log*
 *.swo
 *~
 .DS_Store
+*.db
