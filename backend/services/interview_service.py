@@ -259,7 +259,7 @@ class InterviewService:
         from agents.workflow import end_graph
 
         result = await end_graph.ainvoke(state)
-        report_data = result.get("final_report", {})
+        report_data = result.get("report", {}) or result.get("final_report", {})
 
         # Save report to DB
         report = Report(
